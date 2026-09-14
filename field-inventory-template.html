@@ -68,7 +68,7 @@
                     </tr>
 
                     <tr>
-                        <td>Requested date (required)</td>
+                        <td>Requested Date (Required)</td>
                         <td>Identifies the date the room is being requested.</td>
                         <td>Yes</td>
                         <td>input type="date"</td>
@@ -77,6 +77,61 @@
                         <td>Required</td>
                         <td>Scheduling information only. No additional personal information is collected.</td>
                     </tr>
+                    <tr>
+                        <td>Start Time (Required)</td>
+                        <td>Identifies when the requested room use should begin.</td>
+                        <td>Yes</td>
+                        <td>input type="time"</td>
+                        <td>start_time = selected time</td>
+                        <td>N/A</td>
+                        <td>Required; min="09:00"; max="19:00"; step="1800"</td>
+                        <td>Scheduling information only. No personal or sensitive information is collected.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Duration (Required)</td>
+                        <td>Identifies how long the room is needed.</td>
+                        <td>Yes</td>
+                        <td>select</td>
+                        <td>duration = 1-hour, 2-hours, or 3-hours</td>
+                        <td>N/A</td>
+                        <td>Required; choose one listed duration</td>
+                        <td>Scheduling information only. No personal or sensitive information is collected.</td>
+                    </tr>
+                    
+                     <tr>
+                        <td>Expected Attendees (Required)</td>
+                        <td>Confirms the group fits the room capacity.</td>
+                        <td>Yes</td>
+                        <td>input type="number"</td>
+                        <td>attendees = whole number from 1 through 20</td>
+                        <td>N/A</td>
+                        <td>Required; min="1"; max="20"; step="1"</td>
+                        <td>Aggregate count only. Individual attendee names or identities are not collected.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Conference-style Tables</td>
+                        <td>Lets the requester choose this room layout.</td>
+                        <td>Yes, as part of the room-layout group</td>
+                        <td>input type="radio"</td>
+                        <td>room_layout = conference</td>
+                        <td>N/A</td>
+                        <td>The room-layout radio group is required.</td>
+                        <td>No personal or sensitive information is collected.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Classroom-style Rows</td>
+                        <td>Lets the requester choose this room layout.</td>
+                        <td>Yes, as part of the room-layout group</td>
+                        <td>input type="radio"</td>
+                        <td>room_layout = classroom</td>
+                        <td>N/A</td>
+                        <td>The room-layout radio group is required.</td>
+                        <td>No personal or sensitive information is collected.</td>
+                    </tr>
+
 
                 </tbody>
             </table>
