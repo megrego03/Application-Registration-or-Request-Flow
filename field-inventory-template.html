@@ -55,6 +55,7 @@
                         <td>Required</td>
                         <td>Personal identifier. Collect only a name, not an address or other identity data. Use fictional information for testing.</td>
                     </tr>
+
                     <tr>
                         <td>Email Address (Required)</td>
                         <td>Provides the contact method needed to return the reservation decision or ask a follow-up question.</td>
@@ -64,6 +65,17 @@
                         <td>autocomplete="email"</td>
                         <td>Required; native email-format validation</td>
                         <td>Contact information. Collect email as the only contact method needed for this task, rather than also collecting a phone number. Use a fictional example.com address for testing.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Requested date (required)</td>
+                        <td>Identifies the date the room is being requested.</td>
+                        <td>Yes</td>
+                        <td>input type="date"</td>
+                        <td>reservation_date = selected date</td>
+                        <td>N/A</td>
+                        <td>Required</td>
+                        <td>Scheduling information only. No additional personal information is collected.</td>
                     </tr>
 
                 </tbody>
