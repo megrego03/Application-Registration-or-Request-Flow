@@ -114,21 +114,70 @@
                 
                 <section id="states">
                     <h2>F5 · State and Recovery Specimen</h2>
-                    <p>Document default, focus, required, valid, invalid, disabled, and a static server-returned error. Keep this section separate from the primary blank form when necessary to avoid misleading users.</p>
-                
-                    <div class="error-summary">
-                        <h3>There is a problem with the fictional submission</h3>
-                        <p><a href="#error-example">Email address needs attention</a></p>
+                    <p>The examples below demonstrate form-control states using fictional information.</p>
+
+                    <div class="state-example">
+                        <h3>Default State</h3>
+                        <div class="field">
+                            <label for="default-example">Default field</label>
+                            <input id="default-example" type="text">
+                        </div>
                     </div>
-                
-                    <div class="field field-error">
-                        <label for="error-example">Email address</label>
-                        <input id="error-example" type="email" value="alex.example" aria-invalid="true" aria-describedby="error-message">
-                        <p id="error-message"><strong>Error:</strong> Enter an address in the format name@example.com.</p>
+
+                    <div class="state-example">
+                        <h3>Focus State</h3>
+                        <p class="help">Use the Tab key to place keyboard focus on this field.</p>
+                        <div class="field">
+                            <label for="focus-example">Focus example</label>
+                            <input id="focus-example" type="text">
+                        </div>
                     </div>
-                
-                    <button type="button" disabled>Disabled example</button>
-                
+
+                    <div class="state-example">
+                        <h3>Required State</h3>
+                        <div class="field">
+                            <label for="required-example">Required field (Required)</label>
+                            <input id="required-example" type="text" required>
+                        </div>
+                    </div>
+
+                    <div class="state-example">
+                        <h3>Valid State</h3>
+                        <div class="field field-valid">
+                            <label for="valid-example">Email address</label>
+                            <input id="valid-example" type="email" value="email@example.com">
+                            <p>Valid: The email address uses the expected format.</p>
+                        </div>
+                    </div>
+
+                    <div class="state-example">
+                        <h3>Invalid State</h3>
+                        <div class="field field-error">
+                            <label for="invalid-example">Email address</label>
+                            <input id="invalid-example" type="email" value="email.example" aria-invalid="true" aria-describedby="invalid-message">
+                            <p id="invalid-message"><strong>Error:</strong> Enter an address in the format name@example.com.</p>
+                        </div>
+                    </div>
+
+                    <div class="state-example">
+                        <h3>Disabled State</h3>
+                        <button type="button" disabled>Disabled example</button>
+                    </div>
+
+                    <div class="state-example">
+                        <h3>Static Server-Returned Error</h3>
+
+                        <div class="error-summary">
+                            <h4>There is a problem with the fictional submission</h4>
+                            <p><a href="#server-error-example">Email address needs attention</a></p>
+                        </div>
+
+                        <div class="field field-error">
+                            <label for="server-error-example">Email Address (Required)</label>
+                            <input id="server-error-example" type="email" value="alex.example" aria-invalid="true" aria-describedby="server-error-message">
+                            <p id="server-error-message"><strong>Error:</strong> Enter an address in the format name@example.com. Correct the email address and submit the form again.</p>
+                        </div>
+                    </div>
                 </section>
                 
                 <section id="documentation">
