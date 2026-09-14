@@ -9,7 +9,7 @@
 
     <body>
         <header class="page-header">
-            <p class="eyebrow">Application, Registration, or Request</p>
+            <p class="eyebrow">Reservation Request</p>
             <h1>Community Room Reservation Request</h1>
             <p class="lede">Request a community room for a small meeting or activity.</p>
         </header>
@@ -19,42 +19,91 @@
                 <h2>F1 · Purpose and Expectations</h2>
                 
                 <p>This form is for people requesting use of a community room. Allow a few minutes to complete the form. After submission, the reservation request would be reviewed and a response would be sent to the email address provided.</p>
-                <p><strong>Required/Optional Convention:</strong> Fields labeled "(required)" must be completed. All other fields are optional.</p>
-                <p><strong>Privacy:</strong>This is a front-end class prototype. Do not enter real personal data. Use fictional information only.</p>
+                <p><strong>Required/Optional Convention:</strong> Fields labeled "(Required)" must be completed. All other fields are optional.</p>
+                <p><strong>Privacy:</strong> This is a front-end class prototype. Do not enter real personal data. Use fictional information only.</p>
             </section>
 
             <form action="" method="get">
                 <fieldset>
+                 
                     <legend>F3 · Contact information</legend>
-                    <p class="help">Replace or extend this group based on your justified field inventory.</p>
-                    
+
                     <div class="field">
-                        <label for="name">Name</label>
-                        <input id="name" name="name" type="text" autocomplete="name">
+                        <label for="requester-name">Full Name (Required)</label>
+                        <input id="requester-name" name="requester_name" type="text" autocomplete="name" required>
                     </div>
                    
                     <div class="field">
-                        <label for="email">Email address (required)</label>
+                        <label for="email">Email Address (Required)</label>
                         <input id="email" name="email" type="email" autocomplete="email" required>
                     </div>
                 
                 </fieldset>
                 
                 <fieldset>
-                    <legend>F3 · Request choices</legend>
-                    <p class="help">Use an appropriate radio, checkbox, or select structure for the task.</p>
-                    <label class="choice">
-                        <input type="radio" name="request_type" value="option-a"> Replace with option A</label>
-                        <label class="choice"><input type="radio" name="request_type" value="option-b"> Replace with option B</label>
-                    </fieldset>
-                
+                    <legend>F3 · Reservation Details</legend>
+
                     <div class="field">
-                        <label for="details">Request details</label>
-                        <p class="help" id="details-help">Explain the expected content and any limit before entry.</p>
-                        <textarea id="details" name="details" aria-describedby="details-help"></textarea>
+                        <label for="reservation-date">Requested Date (Required)</label>
+                        <input id="reservation-date" name="reservation_date" type="date" required>
                     </div>
+
+                    <div class="field">
+                        <label for="start-time">Start Time (Required)</label>
+                        <input id="start-time" name="start_time" type="time" min="09:00" max="19:00" step="1800" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="duration">Duration (Required)</label>
+                        <select id="duration" name="duration" required>
+                            <option value="">Select a duration</option>
+                            <option value="1-hour">1 hour</option>
+                            <option value="2-hours">2 hours</option>
+                            <option value="3-hours">3 hours</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="attendees">Expected Attendees (Required)</label>
+                        <input id="attendees" name="attendees" type="number" min="1" max="20" step="1" required>
+                    </div>
+                </fieldset>
                 
-                    <button type="submit">Replace with a specific action</button>
+                <fieldset>
+                    <legend>F3 · Room Layout</legend>
+
+                    <label class="choice">
+                        <input type="radio" name="room_layout" value="conference" required>
+                        Conference-style Tables
+                    </label>
+
+                    <label class="choice">
+                        <input type="radio" name="room_layout" value="classroom" required>
+                        Classroom-style Rows
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>F3 · Equipment</legend>
+
+                    <label class="choice">
+                        <input type="checkbox" name="equipment" value="projector">
+                        Projector
+                    </label>
+
+                    <label class="choice">
+                        <input type="checkbox" name="equipment" value="whiteboard">
+                        Whiteboard
+                    </label>
+                </fieldset>
+
+                    <div class="field">
+                        <label for="notes">Additional Notes (Optional)</label>
+                        <p class="help" id="notes-help">Add any reservation details not covered above. Do not include sensitive information. Maximum 300 characters.</p>
+                        <textarea id="notes" name="notes" maxlength="300" aria-describedby="notes-help"></textarea>
+                    </div>
+
+                    <button type="submit">Submit Reservation Request</button>
                 
                 </form>
                 
