@@ -35,7 +35,8 @@
                    
                     <div class="field">
                         <label for="email">Email Address (Required)</label>
-                        <input id="email" name="email" type="email" autocomplete="email" required>
+                        <p class="help" id="email-help">Enter an email address in the format email@example.com.</p>
+                        <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-help">
                     </div>
                 
                 </fieldset>
@@ -50,7 +51,8 @@
 
                     <div class="field">
                         <label for="start-time">Start Time (Required)</label>
-                        <input id="start-time" name="start_time" type="time" min="09:00" max="19:00" step="1800" required>
+                        <p class="help" id="start-time-help">Choose a start time from 9:00 AM through 7:00 PM in 30-minute increments.</p>
+                        <input id="start-time" name="start_time" type="time" min="09:00" max="19:00" step="1800" required aria-describedby="start-time-help">
                     </div>
 
                     <div class="field">
@@ -65,12 +67,15 @@
 
                     <div class="field">
                         <label for="attendees">Expected Attendees (Required)</label>
-                        <input id="attendees" name="attendees" type="number" min="1" max="20" step="1" required>
+                        <p class="help" id="attendees-help">Enter a whole number from 1 through 20.</p>
+                        <input id="attendees" name="attendees" type="number" min="1" max="20" step="1" required aria-describedby="attendees-help">
                     </div>
+
                 </fieldset>
                 
                 <fieldset>
-                    <legend>F3 · Room Layout</legend>
+                    <legend>F3 · Room Layout (Required)</legend>
+                    <p class="help">Choose one room layout.</p>
 
                     <label class="choice">
                         <input type="radio" name="room_layout" value="conference" required>
