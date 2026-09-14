@@ -46,15 +46,26 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Example only</td>
-                        <td>Replace</td>
-                        <td>Yes/No</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace or N/A</td>
-                        <td>Replace or none</td>
-                        <td>Replace</td>
+                        <td>Full Name (Required)</td>
+                        <td>Identifies the requester so staff can address the response.</td>
+                        <td>Yes</td>
+                        <td>input type="text"</td>
+                        <td>requester_name = user-entered text</td>
+                        <td>autocomplete="name"</td>
+                        <td>Required</td>
+                        <td>Personal identifier. Collect only a name, not an address or other identity data. Use fictional information for testing.</td>
                     </tr>
+                    <tr>
+                        <td>Email Address (Required)</td>
+                        <td>Provides the contact method needed to return the reservation decision or ask a follow-up question.</td>
+                        <td>Yes</td>
+                        <td>input type="email"</td>
+                        <td>email = user-entered email address</td>
+                        <td>autocomplete="email"</td>
+                        <td>Required; native email-format validation</td>
+                        <td>Contact information. Collect email as the only contact method needed for this task, rather than also collecting a phone number. Use a fictional example.com address for testing.</td>
+                    </tr>
+
                 </tbody>
             </table>
         </body>
